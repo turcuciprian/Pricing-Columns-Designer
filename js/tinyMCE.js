@@ -15,6 +15,8 @@ jQuery(document).ready(function($) {
     });
     var ppdPopupClose = $('a.ppdClose');
     if(ppdPopupClose[0]){
-      ppdPopupClose.addClass('hidden');
+      ppdPopupClose.click(function(){
+        ppdPopupHTML.addClass('hidden');
+      });
     }
 });
