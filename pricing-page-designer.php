@@ -9,4 +9,5 @@
   License: GPLv2 or later
   Text Domain: ppd
  */
- require_once 'tinyMCE.php';
+ require_once 'inc/tinyMCE.php';
+ require_once 'inc/popup.php';
