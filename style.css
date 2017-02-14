@@ -2,6 +2,7 @@
   display:none;
 }
 .ppd .ppdPopupHTML{
+  position: relative;
   background:#fff;
   position: fixed;
   top:2%;
@@ -9,4 +10,19 @@
   left:2%;
   right:2%;
   z-index:99999;
+  border:1px solid #cdcdcd;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.ppd .ppdPopupHTML a.ppdClose{
+  position: absolute;
+  right:10px;
+  top:10px;
+}
+.ppd .ppdPopupHTML button.ppdSave{
+  position: absolute;
+  right:10px;
+  bottom:10px;
 }

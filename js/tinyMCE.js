@@ -1,11 +1,20 @@
 jQuery(document).ready(function($) {
+  var ppdPopupHTML = $('.ppdPopupHTML');
+
     tinymce.PluginManager.add('ppdButt', function(editor, url) {
         editor.addButton('ppdButt', {
             text: 'Manage Columns',
             icon: false,
             onclick: function() {
-                editor.insertContent('Hello World!');
+              var ppdPopupHTML = $('.ppdPopupHTML');
+              if(ppdPopupHTML[0]){
+                ppdPopupHTML.removeClass('hidden');
+              }
             }
         });
     });
+    var ppdPopupClose = $('a.ppdClose');
+    if(ppdPopupClose[0]){
+      ppdPopupClose.addClass('hidden');
+    }
 });
