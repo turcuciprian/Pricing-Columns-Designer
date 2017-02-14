@@ -9,4 +9,4 @@
   License: GPLv2 or later
   Text Domain: ppd
  */
- require_once 'tinyMCE.php'
+ require_once 'tinyMCE.php';
