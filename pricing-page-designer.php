@@ -9,6 +9,7 @@
   License: GPLv2 or later
   Text Domain: ppd
  */
+ require_once 'inc/rest.php';
  require_once 'inc/enqueue.php';
  require_once 'inc/tinyMCE.php';
  require_once 'inc/popup.php';
