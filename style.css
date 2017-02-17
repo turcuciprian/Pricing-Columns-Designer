@@ -101,8 +101,14 @@
   -ms-flex-item-align: auto;
   align-self: flex-end;
 }
+.ppd .ppdPopupHTML .column{
+  border:1px solid rgb(193, 193, 193);
+  padding:5px;
+}
 .ppd .ppdPopupHTML .column.add{
   background:none;
+  border:0px solid rgb(193, 193, 193);
+  padding:0px;
 
 }
 .ppd .ppdPopupHTML .column.add .row{
