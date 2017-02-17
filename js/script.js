@@ -5,7 +5,7 @@
         $scope.addRow = function(){
           var newGenArr = $scope.grid;
           newGenArr.forEach(function(index){
-            index.push(' a');
+            index.push(' a'+Math.random());
           });
           console.log(newGenArr);
           $scope.grid = newGenArr;
