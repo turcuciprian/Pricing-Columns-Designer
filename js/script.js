@@ -4,8 +4,9 @@
         $scope.grid = [['a1','a2','a3'],['b1','b2','b3']];
         $scope.addRow = function(){
           var newGenArr = $scope.grid;
-          newGenArr.forEach(function(index){
-            index.push(' a'+Math.random());
+          newGenArr.forEach(function(value,index){
+            console.log(index);
+            value.push(value.length);
           });
           console.log(newGenArr);
           $scope.grid = newGenArr;
