@@ -21,7 +21,7 @@ function ppdPopupHTML()
       </div>
       <div class="column add br">
         <div class="row">
-          <button type="button" class="addRow" name="button">+ Row</button>
+          <button type="button" ng-click="addRow()" class="addRow" name="button">+ Row</button>
         </div>
       </div>
     </div>
