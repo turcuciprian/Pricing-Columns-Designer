@@ -29,6 +29,37 @@
 .ppd .ppdPopupHTML{
 
   display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.ppd .ppdPopupHTML .mCont{
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+
+
+  display: -ms-flexbox;
    display: -webkit-flex;
    display: flex;
    -webkit-flex-direction: row;
@@ -47,7 +78,19 @@
    -ms-flex-align: center;
    align-items: center;
 }
-.ppd .ppdPopupHTML .mCont{
+.ppd .ppdPopupHTML .mCont .column{
+  display:inline-block;
+}
+.ppd .ppdPopupHTML .mCont .column .row{
+  padding:5px;
+  background:rgb(227, 227, 227);
+  border:1px solid rgb(73, 73, 73);
+}
+.ppd .ppdPopupHTML button{
+  display: block;
+}
+
+.ppd .ppdPopupHTML button.addRow{
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -56,13 +99,19 @@
   flex: 0 1 auto;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
-  align-self: auto;
+  align-self: flex-end;
 }
-.ppd .ppdPopupHTML .mCont .column{
-  display:inline-block;
+.ppd .ppdPopupHTML .column.add{
+  background:none;
+
 }
-.ppd .ppdPopupHTML .mCont .column .row{
-  padding:5px;
-  background:rgb(227, 227, 227);
-  border:1px solid rgb(73, 73, 73);
+.ppd .ppdPopupHTML .column.add .row{
+  background:none;
+  padding:10px;
+  margin:10px;
+  border:1px solid rgb(199, 199, 199);
+}
+
+.ppd .ppdPopupHTML .column.add.br .row{
+  margin-left:-80px;
 }

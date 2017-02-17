@@ -13,6 +13,16 @@ function ppdPopupHTML()
             {{value2}}
           </div>
         </div>
+        <div class="column add">
+          <div class="row">
+            <button type="button" class="addColumn" name="button">+ Col</button>
+          </div>
+        </div>
+      </div>
+      <div class="column add br">
+        <div class="row">
+          <button type="button" class="addRow" name="button">+ Row</button>
+        </div>
       </div>
     </div>
   </div>
