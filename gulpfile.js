@@ -11,34 +11,32 @@ var uglify = require('gulp-uglifyjs');
 //
 //SASS
 //
-gulp.task('sass', function () {
-  return gulp.src('./src/sass/style.min.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./ss'));
+gulp.task('sass', function() {
+    return gulp.src('./src/sass/style.min.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./css'));
 });
 //
 // Javascript
 //
-
 gulp.task('compressjS', function() {
-  return gulp.src('./src/js/*.js')
-  .pipe(uglify('script.min.js', {
-    outSourceMap: true,
-    mangle: false
-  }))
-  .pipe(gulp.dest('./ss'));
+    return gulp.src('./src/js/*.js')
+        .pipe(uglify('script.min.js', {
+            outSourceMap: true,
+            mangle: false
+        }))
+        .pipe(gulp.dest('./js'));
 });
-
 //
 // First run files
 //
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./src/sass/custom/*.scss', ['sass']);
-  gulp.watch('./src/sass/style.min.scss', ['sass']);
-  gulp.watch('./src/js/*.js', ['compressjS']);
+gulp.task('sass:watch', function() {
+    gulp.watch('./src/sass/custom/*.scss', ['sass']);
+    gulp.watch('./src/sass/style.min.scss', ['sass']);
+    gulp.watch('./src/js/*.js', ['compressjS']);
 
 });
-gulp.task('default', ['sass','compressjS','sass:watch']);
+gulp.task('default', ['sass', 'compressjS', 'sass:watch']);
