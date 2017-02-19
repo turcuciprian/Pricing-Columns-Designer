@@ -80,20 +80,27 @@
 }
 .ppd .ppdPopupHTML .mCont .column{
   display:inline-block;
+  margin-right:5px;
 }
 
 .ppd .ppdPopupHTML .mCont .column:hover{
-  background: red;
+  background: rgb(255, 213, 213);
 }
 .ppd .ppdPopupHTML .mCont .column .delete{
   padding:5px;
-  background:darkred;
+  background:red;
+  display: inline-block;
+  margin:5px;
+  color:#FFF;
+
+  -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 }
 .ppd .ppdPopupHTML .mCont .column .delete:hover{
+  display: inline-block;
+
   cursor: pointer;
-}
-.ppd .ppdPopupHTML .mCont .column:hover .delete{
-  display: block;
 }
 
 .ppd .ppdPopupHTML .mCont .column .row{
@@ -127,11 +134,16 @@
   padding:0px;
 
 }
+
+.ppd .ppdPopupHTML .column .row.title{
+  background:rgb(124, 185, 183);
+}
+
 .ppd .ppdPopupHTML .column.add .row{
   background:none;
   padding:10px;
   margin:10px;
-  border:1px solid rgb(199, 199, 199);
+  border:0px solid rgb(199, 199, 199);
 }
 
 .ppd .ppdPopupHTML .column.add.br .row{
