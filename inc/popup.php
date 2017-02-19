@@ -7,6 +7,10 @@ function ppdPopupHTML()
     <div class="ppdPopupHTML" ng-controller="ppdControler">
       <a href="#" class="ppdClose button">X</a>
       <button type="button" class="ppdSave button button-primary button-large" name="button">Save</button>
+      <div class="addStuff">
+        <button type="button" class="button button-primary button-large addColumn" ng-click="addColumn()" name="button">Add Column</button>
+        <button type="button" class="button button-primary button-large addRow" ng-click="addRow()" name="button">Add Row</button>
+      </div>
       <div class="mCont">
         <div class="column side">
           <div class="row title">
@@ -25,16 +29,6 @@ function ppdPopupHTML()
           <div ng-click="removeColumn($index)" ng-show="grid.length > 1" class="delete">
             Delete
           </div>
-        </div>
-        <div class="column add">
-          <div class="row">
-            <button type="button" class="button button-primary button-large addColumn" ng-click="addColumn()" name="button">Add Column</button>
-          </div>
-        </div>
-      </div>
-      <div class="column add br">
-        <div class="row">
-          <button type="button" class="button button-primary button-large addRow" ng-click="addRow()" name="button">Add Row</button>
         </div>
       </div>
     </div>

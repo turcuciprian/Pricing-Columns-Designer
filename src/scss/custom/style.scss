@@ -87,6 +87,10 @@
                 display: inline-block;
                 margin-right: 5px;
 
+                -webkit-align-self: flex-start;
+                -ms-flex-item-align: flex-start;
+                align-self: flex-start;
+
                 &:hover {
                     background: rgb(255, 213, 213);
                 }
@@ -118,12 +122,10 @@
                 }
                 //side column
                 &.side {
-                    -webkit-align-self: flex-start;
-                    -ms-flex-item-align: flex-start;
-                    align-self: flex-start;
+
                     border:0px solid red;
                     .title{
-                      min-height: 20px;
+                      min-height: 21px;
                       background:none;
                       border:0px solid red;
                     }
@@ -137,6 +139,8 @@
                     border: 0 solid rgb(193, 193, 193);
 
                     &.br {
+                      margin-top: 20px;
+
                         .row {
                             margin-left: -80px;
                         }
@@ -164,6 +168,11 @@
                 -ms-flex-item-align: auto;
                 align-self: flex-end;
             }
+        }
+        .addStuff{
+          position: absolute;
+          left:20px;
+          top:20px;
         }
     }
 }
