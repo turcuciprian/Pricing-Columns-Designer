@@ -21,9 +21,20 @@ gulp.task('sass', function() {
 //
 // Javascript
 //
-gulp.task('compressjS', function() {
-    return gulp.src('./src/javascript/*.js')
-        .pipe(uglify('script.min.js', {
+
+//custom
+gulp.task('compressjSCustom', function() {
+    return gulp.src('./src/javascript/custom/*.js')
+        .pipe(uglify('custom.min.js', {
+            outSourceMap: true,
+            mangle: false
+        }))
+        .pipe(gulp.dest('./js'));
+});
+//custom
+gulp.task('compressjSLib', function() {
+    return gulp.src('./src/javascript/lib/*.js')
+        .pipe(uglify('lib.min.js', {
             outSourceMap: true,
             mangle: false
         }))
@@ -36,7 +47,8 @@ gulp.task('compressjS', function() {
 gulp.task('sass:watch', function() {
     gulp.watch('./src/sass/custom/*.scss', ['sass']);
     gulp.watch('./src/sass/style.min.scss', ['sass']);
-    gulp.watch('./src/js/*.js', ['compressjS']);
+    gulp.watch('./src/javascript/lib/*.js', ['compressjSLib']);
+    gulp.watch('./src/javascript/custom/*.js', ['compressjSCustom']);
 
 });
-gulp.task('default', ['sass', 'compressjS', 'sass:watch']);
+gulp.task('default', ['sass', 'compressjSLib', 'compressjSCustom', 'sass:watch']);
