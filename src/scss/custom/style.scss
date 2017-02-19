@@ -119,6 +119,9 @@
                     &.title {
                         background: rgb(124, 185, 183);
                     }
+                    &.highlight{
+                      background: rgb(145, 145, 145); 
+                    }
                 }
                 //side column
                 &.side {
@@ -131,6 +134,15 @@
                     }
                     &:hover{
                       background: none;
+                    }
+                    .row{
+                      position: relative;
+                      .delete{
+                        padding:1px;
+                        position: absolute;
+                        top:-6px;
+                        left:-50px;
+                      }
                     }
                 }
 
