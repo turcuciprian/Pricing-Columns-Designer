@@ -15,7 +15,7 @@ function ppdPopupHTML()
         <div class="column side">
           <div class="row title">
           </div>
-          <div class="row" ng-repeat="(sideKey,sideValue) in sideColumn track by $index">
+          <div class="row" ng-class="{highlight: highlughtIfIndex(sideKey)}" ng-repeat="(sideKey,sideValue) in sideColumn track by $index">
             {{sideValue}}
             <div class="delete" ng-mouseover="changeRowIndex(sideKey)" ng-mouseleave="rowIndex = -1">
 Delete
