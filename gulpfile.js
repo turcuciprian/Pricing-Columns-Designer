@@ -22,7 +22,7 @@ gulp.task('sass', function() {
 // Javascript
 //
 gulp.task('compressjS', function() {
-    return gulp.src('./src/js/*.js')
+    return gulp.src('./src/javascript/*.js')
         .pipe(uglify('script.min.js', {
             outSourceMap: true,
             mangle: false
