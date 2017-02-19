@@ -17,6 +17,14 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
 
         $scope.grid = newGenArr;
     };
+    $scope.deleteRow = function(key){
+        var newGenArr = $scope.grid;
+        newGenArr.forEach(function(value, index) {
+          value.splice(key,1);
+        });
+        $scope.sideColumn.splice(key,1);
+        $scope.grid = newGenArr;
+    };
     $scope.addColumn = function() {
         var newGenArr = $scope.grid;
         if (newGenArr[0]) {
@@ -27,7 +35,7 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
     };
     $scope.changeRowIndex = function(ind) {
         $scope.rowIndex = ind;
-    }
+    };
     $scope.highlughtIfIndex = function(ind) {
         if (ind === $scope.rowIndex) {
             return true;
