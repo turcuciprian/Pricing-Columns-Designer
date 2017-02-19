@@ -1,7 +1,7 @@
 //the angular part
     var ppdMod = angular.module('ppdAng', []);
     ppdMod.controller('ppdControler', ['$scope', function($scope) {
-        $scope.grid = [[]];
+        $scope.grid = [[''],['']];
         $scope.addRow = function(){
           var newGenArr = $scope.grid;
           newGenArr.forEach(function(value,index){
@@ -12,13 +12,14 @@
         };
         $scope.addColumn = function(){
           var newGenArr = $scope.grid;
-          console.log(newGenArr);
           if(newGenArr[0]){
-            console.log(newGenArr[0].length);
             newGenArr.push(returnArrLen(newGenArr[0].length));
           }else{
             newGenArr.push([]);
           }
+        };
+        $scope.removeColumn = function(index){
+          $scope.grid.splice(index,1);
         };
         var returnArrLen = function(size){
           var arr = [];

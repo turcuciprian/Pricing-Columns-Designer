@@ -12,6 +12,9 @@ function ppdPopupHTML()
           <div class="row" idVal="{{key}}" ng-repeat="(key2,value2) in value track by $index">
             {{value2}}
           </div>
+          <div ng-click="removeColumn($index)" class="delete">
+            x
+          </div>
         </div>
         <div class="column add">
           <div class="row">
