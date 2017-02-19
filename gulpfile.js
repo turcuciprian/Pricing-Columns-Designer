@@ -12,7 +12,7 @@ var uglify = require('gulp-uglifyjs');
 //SASS
 //
 gulp.task('sass', function() {
-    return gulp.src('./src/sass/style.min.scss')
+    return gulp.src('./src/scss/style.min.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(sourcemaps.write())
@@ -45,8 +45,8 @@ gulp.task('compressjSLib', function() {
 //
 
 gulp.task('sass:watch', function() {
-    gulp.watch('./src/sass/custom/*.scss', ['sass']);
-    gulp.watch('./src/sass/style.min.scss', ['sass']);
+    gulp.watch('./src/scss/custom/*.scss', ['sass']);
+    gulp.watch('./src/scss/*/*.scss', ['sass']);
     gulp.watch('./src/javascript/lib/*.js', ['compressjSLib']);
     gulp.watch('./src/javascript/custom/*.js', ['compressjSCustom']);
 
