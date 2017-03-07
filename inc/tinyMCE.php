@@ -49,7 +49,7 @@ class ppdTinyMCE
     }
     public function ppd_register_tinymce_javascript($plugin_array)
     {
-        $plugin_array['ppdButt'] = plugins_url('../js/script.min.js', __FILE__);
+        $plugin_array['ppdButt'] = plugins_url('../js/custom.min.js', __FILE__);
 
         return $plugin_array;
     }

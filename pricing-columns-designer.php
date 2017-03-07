@@ -1,6 +1,6 @@
 <?php
 /*
-  Plugin Name: Pricing Page Designer
+  Plugin Name: Pricing Columns Designer
   Plugin URI: http://ciprianturcu.com
   Description: A plugin that adds pricing columns and rows, easily to any page or post.
   Version: 1.0
