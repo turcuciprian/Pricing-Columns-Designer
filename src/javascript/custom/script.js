@@ -38,6 +38,7 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
     };
 
     $scope.highlughtIfIndex = function(ind) {
+      console.log(ind);
         if (ind === $scope.rowIndex) {
             return true;
         }

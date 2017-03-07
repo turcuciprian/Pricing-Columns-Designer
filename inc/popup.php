@@ -15,16 +15,16 @@ function ppdPopupHTML()
         <div class="column side">
           <div class="row title">
           </div>
-          <div class="row cell" ng-class="{highlight: highlughtIfIndex(sideKey)}" ng-repeat="(sideKey,sideValue) in sideColumn track by $index">
+          <div class="row cell" ng-class="{highlight: highlughtIfIndex(sideKey+1)}" ng-repeat="(sideKey,sideValue) in sideColumn track by $index">
             {{sideValue}}
             <input ng-model="sideColumn[sideKey]" type="text" class="editable" name="" value="{{sideColumn[sideKey]}}">
-            <div class="delete" ng-show="grid[0].length > 1" ng-mouseleave="changeRowIndex(-1)" ng-mouseover="changeRowIndex(sideKey)" ng-click="deleteRow(sideKey)">
+            <div class="delete" ng-show="grid[0].length > 1" ng-mouseleave="changeRowIndex(-1)" ng-mouseover="changeRowIndex(sideKey+1)" ng-click="deleteRow(sideKey)">
 Delete
             </div>
           </div>
         </div>
         <div class="column" ng-repeat="(key,value) in grid track by $index">
-          
+
           <div class="row cell" idVal="{{key}}" ng-class="{highlight: highlughtIfIndex(key2),'row title side': key2==0}" ng-repeat="(key2,value2) in value track by $index">
             {{grid[key][key2]}}
             <input ng-model="grid[key][key2]" type="text" class="editable" name="" value="{{grid[key][key2]}}">
