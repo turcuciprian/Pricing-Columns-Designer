@@ -15,8 +15,9 @@ function ppdPopupHTML()
         <div class="column side">
           <div class="row title">
           </div>
-          <div class="row" ng-class="{highlight: highlughtIfIndex(sideKey)}" ng-repeat="(sideKey,sideValue) in sideColumn track by $index">
+          <div class="row cell" ng-class="{highlight: highlughtIfIndex(sideKey)}" ng-repeat="(sideKey,sideValue) in sideColumn track by $index">
             {{sideValue}}
+            <button type="button" class="dashicons dashicons-edit" name="button"></button>
             <div class="delete" ng-show="grid[0].length > 1" ng-mouseleave="changeRowIndex(-1)" ng-mouseover="changeRowIndex(sideKey)" ng-click="deleteRow(sideKey)">
 Delete
             </div>

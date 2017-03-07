@@ -164,6 +164,24 @@
                             top: -6px;
                             left: -50px;
                         }
+                        &.cell{
+                          button{
+                            position: absolute;
+                            display:none;
+                          }
+                          &:hover{
+                            button{
+                              display: inline-block;
+                              top:0px;
+                              right:0px;
+                              &.dashicons{
+                                padding:0 2px;
+                                width:30px;
+                              }
+                            }
+                          }
+                        }
+
                     }
                 }
 
