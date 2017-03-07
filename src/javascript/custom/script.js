@@ -5,7 +5,7 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
     $scope.grid = [
         ['Empty']
     ];
-    $scope.sideColumn = ['Empty'];
+    $scope.sideColumn = ['Empty Row Title'];
     $scope.rowIndex = -1;
 
     $scope.addRow = function() {
@@ -17,12 +17,12 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
 
         $scope.grid = newGenArr;
     };
-    $scope.deleteRow = function(key){
+    $scope.deleteRow = function(key) {
         var newGenArr = $scope.grid;
         newGenArr.forEach(function(value, index) {
-          value.splice(key,1);
+            value.splice(key, 1);
         });
-        $scope.sideColumn.splice(key,1);
+        $scope.sideColumn.splice(key, 1);
         $scope.grid = newGenArr;
     };
     $scope.addColumn = function() {
