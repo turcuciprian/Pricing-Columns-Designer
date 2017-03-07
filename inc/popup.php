@@ -24,10 +24,8 @@ Delete
           </div>
         </div>
         <div class="column" ng-repeat="(key,value) in grid track by $index">
-          <div class="row title side">
-             Title {{key+1}}
-          </div>
-          <div class="row cell" idVal="{{key}}" ng-class="{highlight: highlughtIfIndex(key2)}" ng-repeat="(key2,value2) in value track by $index">
+          
+          <div class="row cell" idVal="{{key}}" ng-class="{highlight: highlughtIfIndex(key2),'row title side': key2==0}" ng-repeat="(key2,value2) in value track by $index">
             {{grid[key][key2]}}
             <input ng-model="grid[key][key2]" type="text" class="editable" name="" value="{{grid[key][key2]}}">
           </div>

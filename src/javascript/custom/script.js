@@ -5,7 +5,7 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
     $scope.grid = [
         ['Empty']
     ];
-    $scope.sideColumn = ['Empty Row Title'];
+    $scope.sideColumn = [];
     $scope.rowIndex = -1;
 
     $scope.addRow = function() {
@@ -13,7 +13,7 @@ ppdMod.controller('ppdControler', ['$scope', function($scope) {
         newGenArr.forEach(function(value, index) {
             value.push('Empty');
         });
-        $scope.sideColumn.push($scope.sideColumn[0]);
+        $scope.sideColumn.push('Empty Row Description');
 
         $scope.grid = newGenArr;
     };
