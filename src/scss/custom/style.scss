@@ -123,19 +123,23 @@
                         background: rgb(145, 145, 145);
                     }
                     &.cell{
-                      position: relative;
-                      button{
-                        position: absolute;
-                        display:none;
+                      input{
+                        &.editable{
+                          display: none;
+                          position: absolute;
+                          left:0px;
+                          right:0px;
+                          top:0px;
+                          bottom:0px;
+                          min-width:0px;
+                          width:100%;
+                          margin: 0px;
+                        }
                       }
                       &:hover{
-                        button{
-                          display: inline-block;
-                          top:0px;
-                          right:0px;
-                          &.dashicons{
-                            padding:0 2px;
-                            width:30px;
+                        input{
+                          &.editable{
+                            display: inline-block;
                           }
                         }
                       }
@@ -164,24 +168,6 @@
                             top: -6px;
                             left: -50px;
                         }
-                        &.cell{
-                          button{
-                            position: absolute;
-                            display:none;
-                          }
-                          &:hover{
-                            button{
-                              display: inline-block;
-                              top:0px;
-                              right:0px;
-                              &.dashicons{
-                                padding:0 2px;
-                                width:30px;
-                              }
-                            }
-                          }
-                        }
-
                     }
                 }
 
