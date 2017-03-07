@@ -27,8 +27,8 @@ Delete
              Title {{key+1}}
           </div>
           <div class="row cell" idVal="{{key}}" ng-class="{highlight: highlughtIfIndex(key2)}" ng-repeat="(key2,value2) in value track by $index">
-            {{value2}}
-            <input type="text" class="editable" name="" value="">
+            {{grid[key][key2]}}
+            <input ng-model="grid[key][key2]" type="text" class="editable" name="" value="{{grid[key][key2]}}">
           </div>
           <div ng-click="removeColumn($index)" ng-show="grid.length > 1" class="delete">
             Delete

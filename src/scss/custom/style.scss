@@ -123,6 +123,7 @@
                         background: rgb(145, 145, 145);
                     }
                     &.cell{
+                      position: relative;
                       input{
                         &.editable{
                           display: none;
