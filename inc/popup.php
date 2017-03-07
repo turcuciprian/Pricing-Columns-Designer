@@ -26,8 +26,9 @@ Delete
           <div class="row title side">
              Title {{key+1}}
           </div>
-          <div class="row" idVal="{{key}}" ng-class="{highlight: highlughtIfIndex(key2)}" ng-repeat="(key2,value2) in value track by $index">
+          <div class="row cell" idVal="{{key}}" ng-class="{highlight: highlughtIfIndex(key2)}" ng-repeat="(key2,value2) in value track by $index">
             {{value2}}
+            <button type="button" class="dashicons dashicons-edit" name="button"></button>
           </div>
           <div ng-click="removeColumn($index)" ng-show="grid.length > 1" class="delete">
             Delete

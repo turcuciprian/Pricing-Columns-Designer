@@ -86,7 +86,6 @@
                 padding: 5px;
                 display: inline-block;
                 margin-right: 5px;
-
                 -webkit-align-self: flex-start;
                 -ms-flex-item-align: flex-start;
                 align-self: flex-start;
@@ -119,30 +118,52 @@
                     &.title {
                         background: rgb(124, 185, 183);
                     }
-                    &.highlight{
-                      background: rgb(145, 145, 145); 
+
+                    &.highlight {
+                        background: rgb(145, 145, 145);
+                    }
+                    &.cell{
+                      position: relative;
+                      button{
+                        position: absolute;
+                        display:none;
+                      }
+                      &:hover{
+                        button{
+                          display: inline-block;
+                          top:0px;
+                          right:0px;
+                          &.dashicons{
+                            padding:0 2px;
+                            width:30px;
+                          }
+                        }
+                      }
                     }
                 }
                 //side column
                 &.side {
+                    border: 0 solid red;
 
-                    border:0px solid red;
-                    .title{
-                      min-height: 21px;
-                      background:none;
-                      border:0px solid red;
+                    .title {
+                        min-height: 21px;
+                        background: none;
+                        border: 0 solid red;
                     }
-                    &:hover{
-                      background: none;
+
+                    &:hover {
+                        background: none;
                     }
-                    .row{
-                      position: relative;
-                      .delete{
-                        padding:1px;
-                        position: absolute;
-                        top:-6px;
-                        left:-50px;
-                      }
+
+                    .row {
+                        position: relative;
+
+                        .delete {
+                            padding: 1px;
+                            position: absolute;
+                            top: -6px;
+                            left: -50px;
+                        }
                     }
                 }
 
@@ -151,7 +172,7 @@
                     border: 0 solid rgb(193, 193, 193);
 
                     &.br {
-                      margin-top: 20px;
+                        margin-top: 20px;
 
                         .row {
                             margin-left: -80px;
@@ -167,8 +188,10 @@
                 }
             }
         }
+
         button {
             display: block;
+
             &.addRow {
                 -webkit-order: 0;
                 -ms-flex-order: 0;
@@ -181,10 +204,11 @@
                 align-self: flex-end;
             }
         }
-        .addStuff{
-          position: absolute;
-          left:20px;
-          top:20px;
+
+        .addStuff {
+            position: absolute;
+            left: 20px;
+            top: 20px;
         }
     }
 }
